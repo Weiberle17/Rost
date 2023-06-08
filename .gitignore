@@ -16,5 +16,4 @@ Cargo.lock
 # Remove dotenv files
 .env
 
-rost_book/
 rustlings/
