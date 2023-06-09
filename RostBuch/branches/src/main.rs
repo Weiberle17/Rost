@@ -10,6 +10,8 @@ fn main() {
   for_collection();
   for_loop_countdown();
   question_2();
+  vector_test();
+  string_literals();
 }
 
 fn if_true() {
@@ -123,4 +125,18 @@ fn question_2() {
     sum += x;
   }
   println!("{sum}");
+}
+
+fn vector_test() {
+  let a = vec![String::from("Hello World!")];
+  let b = vec!["Hello", "World", "!"];
+  let c = vec!["Hello World!"];
+  println!("{a:?}, {b:?}, {c:?}");
+}
+
+fn string_literals() {
+  let mut a = "Hello world!";
+  println!("{a}");
+  a = "test";
+  println!("{a}");
 }
