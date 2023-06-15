@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
   vec1();
   vec2();
@@ -6,6 +8,8 @@ fn main() {
   strings1();
   strings2();
   strings3();
+  maps1();
+  maps2();
 }
 
 fn vec1() {
@@ -67,7 +71,7 @@ fn strings1() {
   let s = "initial contents".to_string();
 
   dbg!(data, s);
-  
+
   let s = String::from("initial contents");
 
   dbg!(data, s);
@@ -97,4 +101,36 @@ fn strings3() {
   let s3 = s1 + &s2;
 
   dbg!(s2, s3);
+}
+
+fn maps1() {
+  let mut scores = HashMap::new();
+
+  scores.insert(String::from("Blue"), 10);
+  scores.insert(String::from("Yellow"), 50);
+
+  let team_name = String::from("Blue");
+  let score1 = scores.get(&team_name).copied().unwrap_or(0);
+  let score2 = scores.get("Blue").copied().unwrap_or(0);
+
+  for (key, value) in &scores {
+    println!("{key}: {value}");
+  }
+
+  dbg!(scores, score1, score2);
+}
+
+fn maps2() {
+  let text = "hello world wonderful world";
+
+  let mut map = HashMap::new();
+
+  for word in text.split_whitespace() {
+    let count = map.entry(word).or_insert(0);
+    *count += 1;
+  }
+
+  println!("{map:?}");
+  
+  dbg!(map);
 }
