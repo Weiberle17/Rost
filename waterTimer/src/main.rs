@@ -21,7 +21,7 @@ fn main() {
       .timeout(Timeout::Never)
       .show()
       .expect("Failed to show Notification")
-      .on_close(|reason: CloseReason| println!("Notification closed: {reason:?}"));
+      .on_close(|reason: CloseReason| println!("WaterTimer notification closed: {reason:?}"));
 
     sleep(timer);
   }

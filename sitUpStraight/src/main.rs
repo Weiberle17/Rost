@@ -12,7 +12,7 @@ fn main() {
       .timeout(Timeout::Never)
       .show()
       .expect("Failed to show Notification")
-      .on_close(|reason: CloseReason| println!("Notification closed: {reason:?}"));
+      .on_close(|reason: CloseReason| println!("SitUpStraight notification closed: {reason:?}"));
 
     sleep(TIMER);
   }
