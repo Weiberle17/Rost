@@ -5,7 +5,7 @@ fn main() {
   let timer: Duration = Duration::from_secs(
     env::args()
       .nth(1)
-      .unwrap_or("9000".to_string())
+      .unwrap_or("900".to_string())
       .parse()
       .expect("Please input a valid Integer"),
   );
