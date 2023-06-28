@@ -2,7 +2,7 @@
 name = "clap_test"
 version = "0.1.0"
 edition = "2021"
-authors = ["Max Weiberle"]
+authors = ["Max W <maxweiberle63@gmail.com>"]
 description = "A simple to use, efficient, and full-featured Command Line Argument Parser"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
